@@ -2,10 +2,12 @@ import * as React from "react"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
 
+import { Pets } from '@material-ui/icons';
+
 const Header = ({ siteTitle }) => (
   <header
     style={{
-      background: `rebeccapurple`,
+      background: `#16160e`,
       marginBottom: `1.45rem`,
     }}
   >
@@ -24,6 +26,8 @@ const Header = ({ siteTitle }) => (
             textDecoration: `none`,
           }}
         >
+          <Pets fontSize="inherit" />
+          &nbsp;
           {siteTitle}
         </Link>
       </h1>
