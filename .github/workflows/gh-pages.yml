@@ -1,0 +1,28 @@
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [14.4.0] # 実行するノードバージョン
+    steps:
+    - uses: actions/checkout@v2
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node-version }}
+    - name: npm install
+      run: npm install
+    - name: Deploy with gh-pages
+      run: |
+        git config --global user.email "syobon.pastel@gmail.com"
+        git config --global user.name "syobonpastel"
+        git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/syobonpastel/destination_roulette
+        npm install gh-pages --save-dev
+        npm run deploy
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
