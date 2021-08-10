@@ -35,13 +35,12 @@ const Layout = ({ children }) => {
       >
         <main>{children}</main>
         <footer
+          align="center"
           style={{
             marginTop: `2rem`,
           }}
         >
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.com">Gatsby</a>
+          Made by <a href="https://twitter.com/syobon_pastel">しょぼん</a>
         </footer>
       </div>
     </>
