@@ -8,31 +8,31 @@ import { Pets, Twitter, Replay } from '@material-ui/icons';
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 
-function twitter() {
-  window.twttr = (function (d, s, id) {
-    var js, fjs = d.getElementsByTagName(s)[0],
-      t = window.twttr || {};
-    if (d.getElementById(id)) return t;
-    js = d.createElement(s);
-    js.id = id;
-    js.src = "https://platform.twitter.com/widgets.js";
-    fjs.parentNode.insertBefore(js, fjs);
+// function twitter() {
+//   window.twttr = (function (d, s, id) {
+//     var js, fjs = d.getElementsByTagName(s)[0],
+//       t = window.twttr || {};
+//     if (d.getElementById(id)) return t;
+//     js = d.createElement(s);
+//     js.id = id;
+//     js.src = "https://platform.twitter.com/widgets.js";
+//     fjs.parentNode.insertBefore(js, fjs);
 
-    t._e = [];
-    t.ready = function (f) {
-      t._e.push(f);
-    };
-    return t;
-  }(document, "script", "twitter-wjs"));
-}
+//     t._e = [];
+//     t.ready = function (f) {
+//       t._e.push(f);
+//     };
+//     return t;
+//   }(document, "script", "twitter-wjs"));
+// }
 
 const IndexPage = () => {
 
-  twitter();
+  // twitter();
 
   let [nyan, setNyan] = useState(null);
 
-  const nyaans = ["にゃーん", "にゃん", "にゃあああん"];
+  const nyaans = ["にゃーん", "にゃん", "にゃあああん", "にゃご"];
 
   const randomNyan = () => {
     return nyaans[Math.floor(Math.random() * (nyaans.length))];
@@ -63,10 +63,11 @@ const IndexPage = () => {
           りにゃーん
         </Button>
         <br />
-        <Button 
-          variant="contained" 
-          href={"https://twitter.com/intent/tweet?hashtags=にゃーん生成器&text=" + nyan + "%20https://syobonpastel.github.io/random_nya-n/%20"}
+        <Button
+          variant="contained"
+          href={"https://twitter.com/intent/tweet?hashtags=にゃーん生成器&text=" + nyan + "%20https://syobonpastel.github.io/random_nya-n/"}
           endIcon={<Twitter />}
+          target="_ blank"
         >
           ついーにゃ
         </Button>
