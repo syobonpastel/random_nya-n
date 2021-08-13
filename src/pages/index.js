@@ -32,7 +32,7 @@ const IndexPage = () => {
 
   let [nyan, setNyan] = useState(null);
 
-  const nyaans = ["にゃーん", "にゃん", "にゃあああん", "にゃご"];
+  const nyaans = ["にゃーん", "にゃん", "にゃあああん", "にゃご", "にゃにゃにゃ", "にゃーーん", "にゃんにゃん", "ごろごろ", "にゃっ"];
 
   const randomNyan = () => {
     return nyaans[Math.floor(Math.random() * (nyaans.length))];
@@ -65,7 +65,7 @@ const IndexPage = () => {
         <br />
         <Button
           variant="contained"
-          href={"https://twitter.com/intent/tweet?hashtags=にゃーん生成器&text=" + nyan + "%20https://syobonpastel.github.io/random_nya-n/"}
+          href={"https://twitter.com/intent/tweet?hashtags=にゃーんせいせいき&text=" + nyan + "%20https://syobonpastel.github.io/random_nya-n/"}
           endIcon={<Twitter />}
           target="_ blank"
         >
