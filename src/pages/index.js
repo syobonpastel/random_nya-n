@@ -32,7 +32,7 @@ const IndexPage = () => {
 
   let [nyan, setNyan] = useState(null);
 
-  const nyaans = ["にゃーん", "にゃん", "にゃあああん", "にゃご", "にゃにゃにゃ", "にゃーーん", "にゃんにゃん", "ごろごろ", "にゃっ"];
+  const nyaans = ["にゃーん", "にゃん", "にゃあああん", "にゃご", "にゃにゃにゃ？", "にゃーーん", "にゃにゅ…？", "ごろごろ", "にゃっ", "にゃーご", "にゃ？", "にゃっ…"];
 
   const randomNyan = () => {
     return nyaans[Math.floor(Math.random() * (nyaans.length))];
